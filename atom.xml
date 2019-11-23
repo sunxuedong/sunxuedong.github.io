@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>孙雪冬的博客</title>
+  
+  <subtitle>sunxuedong</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://sunxuedong.com/"/>
+  <updated>2019-11-22T08:03:37.000Z</updated>
+  <id>https://sunxuedong.com/</id>
+  
+  <author>
+    <name>孙雪冬</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>table表格里应用省略号text-overflow:ellipsis;</title>
+    <link href="https://sunxuedong.com/2019/11/21/text-overflow-ellipsis-in-table/"/>
+    <id>https://sunxuedong.com/2019/11/21/text-overflow-ellipsis-in-table/</id>
+    <published>2019-11-20T17:57:46.000Z</published>
+    <updated>2019-11-22T08:03:37.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="css" scheme="https://sunxuedong.com/categories/css/"/>
+    
+    
+      <category term="css" scheme="https://sunxuedong.com/tags/css/"/>
+    
+  </entry>
+  
+</feed>
