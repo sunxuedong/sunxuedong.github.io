@@ -1,3 +1,3 @@
-https://sunxuedong.com/2019/12/03/translate-promise-a-specifications/
+https://sunxuedong.com/2019/12/11/text-overflow-ellipsis-in-table/
+https://sunxuedong.com/2019/12/03/translate-promise-a-plus-specifications/
 https://sunxuedong.com/2019/11/28/handwritten-promise/
-https://sunxuedong.com/2019/11/21/text-overflow-ellipsis-in-table/

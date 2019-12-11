@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://sunxuedong.com/2019/12/03/translate-promise-a-specifications/</loc>
-    
-    <lastmod>2019-12-11T02:09:44.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sunxuedong.com/2019/11/28/handwritten-promise/</loc>
     
-    <lastmod>2019-12-10T10:08:02.000Z</lastmod>
+    <lastmod>2019-12-11T09:39:57.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sunxuedong.com/2019/11/21/text-overflow-ellipsis-in-table/</loc>
+    <loc>https://sunxuedong.com/2019/12/11/text-overflow-ellipsis-in-table/</loc>
     
-    <lastmod>2019-11-28T05:52:58.000Z</lastmod>
+    <lastmod>2019-12-11T09:39:18.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxuedong.com/2019/12/03/translate-promise-a-plus-specifications/</loc>
+    
+    <lastmod>2019-12-11T09:39:05.000Z</lastmod>
     
   </url>
   
@@ -44,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://sunxuedong.com/categories/index.html</loc>
-    
-    <lastmod>2019-11-20T17:57:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://sunxuedong.com/contact/index.html</loc>
     
     <lastmod>2019-11-20T17:57:46.000Z</lastmod>
@@ -66,6 +59,13 @@
   
   <url>
     <loc>https://sunxuedong.com/tags/index.html</loc>
+    
+    <lastmod>2019-11-20T17:57:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://sunxuedong.com/categories/index.html</loc>
     
     <lastmod>2019-11-20T17:57:46.000Z</lastmod>
     
