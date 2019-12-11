@@ -7,3 +7,4 @@ public/
 node_modules/
 .idea/
 db.json
+themes/matery/_config.yml
