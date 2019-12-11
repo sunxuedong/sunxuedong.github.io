@@ -37,14 +37,14 @@
       function navToReprintStatement() {
         $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
       }
-    </script></div></div><link rel="stylesheet" href="/libs/gitalk/gitalk.css"><link rel="stylesheet" href="/css/my-gitalk.css"><div class="card gitalk-card" data-aos="fade-up"><div id="gitalk-container" class="card-content"></div></div><script src="/libs/gitalk/gitalk.min.js"></script><script>
+    </script></div></div><link rel="stylesheet" href="/libs/gitalk/gitalk.css"><link rel="stylesheet" href="/css/my-gitalk.css"><div class="card gitalk-card" data-aos="fade-up"><div id="gitalk-container" class="card-content"></div></div><script src="/libs/gitalk/gitalk.min.js"></script><script src="/libs/md5/md5.min.js"></script><script>
     let gitalk = new Gitalk({
         clientID: 'd971672be709e305ac8e',
         clientSecret: 'c943977a5c5aa86c7fb69496528ca3685c746e56',
         repo: 'sunxuedong.github.io',
         owner: 'sunxuedong',
         admin: "sunxuedong",
-        id: '2019/12/11/text-overflow-ellipsis-in-table/',
+        id: md5('2019/12/11/text-overflow-ellipsis-in-table/'),
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
