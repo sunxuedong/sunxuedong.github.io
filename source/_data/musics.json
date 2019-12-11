@@ -1,0 +1,13 @@
+[
+	{
+		"name": "夜曲",
+		"artist": "周杰伦",
+		"url": "/medias/music/yequ.flac",
+		"cover": "/medias/music/avatars/yequ.jpg"
+	},{
+		"name": "一路向北",
+		"artist": "周杰伦",
+		"url": "/medias/music/yiluxiangbei.flac",
+		"cover": "/medias/music/avatars/yiluxiangbei.jpg"
+	}
+]

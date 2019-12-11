@@ -1,0 +1,194 @@
+/* Here is your custom css styles. */
+/*******************************************************************************
+Theme样式覆盖!
+*******************************************************************************/
+html, body {
+    height: 100%;
+}
+#articleContent p {
+    word-break: break-all;
+    text-align: justify;
+}
+@media screen and (max-width: 404px) {
+    header .brand-logo .logo-span {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 358px) {
+    header .brand-logo .logo-span {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 308px) {
+    header .brand-logo .logo-span {
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 266px) {
+    header .brand-logo .logo-span {
+        font-size: 1rem;
+    }
+}
+main.content, .post-container, .page-404 {
+    padding-bottom: 104px;
+    min-height: 100%;
+}
+.page-footer {
+    margin-top: -104px;
+}
+
+/*******************************************************************************
+Promise/A+ 规范，特定样式!
+*******************************************************************************/
+.promisesa {
+    background: #212121;
+    background: -moz-linear-gradient(top, #373737, #212121);
+    background: -webkit-linear-gradient(top, #373737, #212121);
+    background: -ms-linear-gradient(top, #373737, #212121);
+    background: -o-linear-gradient(top, #373737, #212121);
+    background: linear-gradient(top, #373737, #212121);
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+    padding: 50px 10px 30px 139px;
+    text-shadow: #111 0px 0px 10px;
+    position: relative;
+    line-height: inherit;
+}
+.promisesa:before {
+    content: '';
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background: url(/2019/12/03/translate-promise-a-plus-specifications/logo-small.jpg);
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    margin: 0;
+    visibility: visible;
+}
+@media screen and (max-width: 447px) {
+    .promisesa {
+        font-size: 28px;
+        height: 143px;
+    }
+}
+@media screen and (max-width: 361px) {
+    .promisesa {
+        font-size: 23px;
+        height: 143px;
+    }
+}
+@media screen and (max-width: 333px) {
+    .promisesa {
+        font-size: 20px;
+        height: 143px;
+    }
+}
+
+/*******************************************************************************
+footnotelist!
+*******************************************************************************/
+#footnotelist ol {
+    margin-left: 0 !important;
+}
+
+/*******************************************************************************
+Numbering!
+*******************************************************************************/
+
+body {
+    counter-reset: h2 h3;
+}
+
+h2 {
+    counter-increment: h2;
+    counter-reset: h3;
+}
+body #articleContent h2::before {
+    content: counter(h2)". ";
+    display: inline;
+    visibility: visible;
+}
+
+h3 {
+    counter-increment: h3;
+}
+body #articleContent h3::before {
+    content: counter(h2)"."counter(h3)". ";
+    display: inline;
+    visibility: visible;
+}
+
+ol {
+    counter-reset: li;
+    margin-bottom: 0;
+}
+li {
+    word-break: break-all;
+}
+ol li {
+    list-style-type: none;
+    counter-increment: li;
+    margin-left: 1.5em;
+    margin-bottom: 0.3em;
+}
+ol li::before {
+    float: left;
+    margin-left: -5.5em;
+    width: 5.5em;
+    text-align: right;
+}
+h2 ~ ol li::before, h3 ~ h2 ~ ol li::before {
+    content: counter(h2)"."counters(li, ".")".\A0";
+}
+h3 ~ ol li::before {
+    content: counter(h2)"."counter(h3)"."counters(li, ".")".\A0";
+}
+
+/* Workaround Jekyll bug that inserts spurious lone <p>s */
+ol li p:first-of-type:last-of-type {
+    margin: 0;
+}
+ol li p {
+    margin-top: 0;
+}
+
+ul p:first-of-type:last-of-type {
+    display: inline;
+}
+
+/*******************************************************************************
+Catalogue!
+*******************************************************************************/
+/*.toc-list {*/
+    /*counter-reset: h2 h3;*/
+/*}*/
+/*.toc-list .node-name--H2 {*/
+    /*counter-increment: h2;*/
+    /*counter-reset: h3;*/
+/*}*/
+/*.toc-list .node-name--H2::before {*/
+    /*content: counter(h2)". ";*/
+    /*display: inline;*/
+    /*visibility: visible;*/
+/*}*/
+/*.toc-list .node-name--H3 {*/
+    /*counter-increment: h3;*/
+    /*counter-reset: li;*/
+/*}*/
+/*.toc-list .node-name--H2 ~ .toc-list a::before {*/
+    /*content: counter(h2)"."counter(h3)"."counters(li, ".")".\A0";*/
+    /*display: inline;*/
+    /*visibility: visible;*/
+/*}*/
+.toc-list {
+    padding-left: 20px;
+    counter-reset: toc;
+}
+
+.toc-list a:before {
+    content: counters(toc, '.')".\A0";
+    counter-increment: toc;
+}
