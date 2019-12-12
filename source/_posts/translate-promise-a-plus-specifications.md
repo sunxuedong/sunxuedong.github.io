@@ -29,7 +29,7 @@ categories:
 
 最后，Promises/A+ 规范的核心不会去演示如何创建、完成（fulfill）或者拒绝（reject）promises 对象，选择将重点放在提供一个互相嵌套的then方法上。未来在相关规范的工作中可能会涉及这些主题。
 ## 术语
-1. promise” 是一个具有 `then` 方法的对象或函数，该 `then` 方法的行为符合这个规范。
+1. “promise” 是一个具有 `then` 方法的对象或函数，该 `then` 方法的行为符合这个规范。
 2. “thenable” 是一个定义了 `then` 方法的对象或函数。
 3. “value” 是任何合法的 JavaScript 值（包括 `undefined`、thenable 或 promise）。
 4. “exception” 是使用 `throw` 语句抛出的一个值。
@@ -181,7 +181,7 @@ promise2 = promise1.then(onFulfilled, onRejected);
     </p>
 </p>
 
-# 译者注
+## 译者注
 [^1]: 即循环引用。
 [^2]: 即调用时类似[[Resolve]](promise, promise)，这样的话这两个实参是同一个 promise 对象，则会导致无限递归。
 [^3]: ES5 的 getter 特性可能会产生副作用。

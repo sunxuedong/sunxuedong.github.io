@@ -4,6 +4,7 @@ cover: true
 password:
 toc: true
 mathjax: false
+date: 2019-12-11 16:39:37
 summary: 本文参考：ccs2.1中文版规范table部分 http://www.ayqy.net/doc/css2-1/tables.html#width-layout
 tags:
 - overflow

@@ -35,38 +35,49 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i><%- __('publishDate') %>:&nbsp;&nbsp;
-                    <%- date(page.date, 'YYYY-MM-DD HH:mm:ss') %>
+                    <%- date(page.date, 'LL dddd  HH:mm:ss') %>
                 </div>
 
-                <div class="post-author info-break-policy">
-                    <i class="fa fa-user-o fa-fw"></i><%- __('author') %>:&nbsp;&nbsp;
-                    <% if (page.author && page.author.length > 0) { %>
-                    <%- page.author %>
-                    <% } else {%>
-                    <%- config.author %>
-                    <% } %>
-                </div>
+                <% if (page.updateDate) { %>
+                    <div class="post-date info-break-policy">
+                        <i class="fa fa-calendar fa-fw"></i><%- __('updateDate') %>:&nbsp;&nbsp;
+                        <%- date(page.updateDate, 'LL dddd  HH:mm:ss') %>
+                    </div>
+                <% } %>
+
+                <% if (theme.showAuthor) { %>
+                    <div class="post-author info-break-policy" style="display: none;">
+                        <i class="fa fa-user-o fa-fw"></i><%- __('author') %>:&nbsp;&nbsp;
+                        <% if (page.author && page.author.length > 0) { %>
+                        <%- page.author %>
+                        <% } else {%>
+                        <%- config.author %>
+                        <% } %>
+                    </div>
+                <% } %>
 
                 <% if (theme.wordCount.enable) { %>
-                <% if (theme.wordCount.postWordCount) { %>
-                <div class="info-break-policy">
-                    <i class="fa fa-file-word-o fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
-                    <%= wordcount(page.content) %>
-                </div>
-                <% } %>
+                    <% if (theme.wordCount.postWordCount) { %>
+                        <div class="info-break-policy">
+                            <i class="fa fa-file-word-o fa-fw"></i><%- __('wordCount') %>:&nbsp;&nbsp;
+                            <%= wordcount(page.content) %>
+                        </div>
+                    <% } %>
 
-                <% if (theme.wordCount.min2read) { %>
-                <div class="info-break-policy">
-                    <i class="fa fa-clock-o fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
-                    <%= min2read(page.content) %> <%= __('Minutes') %>
-                </div>
-                <% } %>
+                    <% if (theme.wordCount.min2read) { %>
+                        <div class="info-break-policy">
+                            <i class="fa fa-clock-o fa-fw"></i><%- __('readTimes') %>:&nbsp;&nbsp;
+                            <%= min2read(page.content) %> <%= __('Minutes') %>
+                        </div>
+                    <% } %>
                 <% } %>
 
                 <% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
-                    <span id="busuanzi_container_site_pv" style='display:none'></span>
-                    <i class="fa fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
-                    <span id="busuanzi_value_page_pv" ></span>
+                    <div class="info-break-policy">
+                        <span id="busuanzi_container_site_pv" style='display:none'></span>
+                        <i class="fa fa-eye fa-fw"></i><%- __('readCount') %>:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv" ></span>
+                    </div>
                 <% } %>
             </div>
         </div>
