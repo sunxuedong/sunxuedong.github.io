@@ -262,9 +262,10 @@ header nav .brand-span {
     border-radius: 100%;
     vertical-align: middle;
     box-shadow: 0 0 3px #576657, inset 0 0 10px #699add;
+    background: deepskyblue url(/medias/avatars/my-face.png) center/100% no-repeat;
 }
 .my-face:hover .face-icon {
-    background-color: #87CEEB !important;
+    background-color: lightskyblue;
 }
 
 header .brand-logo .logo-img {
