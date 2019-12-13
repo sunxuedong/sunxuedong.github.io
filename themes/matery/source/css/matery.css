@@ -232,7 +232,8 @@ header nav .brand-span {
     }
 }
 .my-face {
-    line-height: inherit;
+    line-height: initial;
+    vertical-align: top;
     position: relative;
     z-index: 4;
     display: inline-block;
@@ -274,6 +275,7 @@ header .brand-logo .logo-img {
 
 header .brand-logo .logo-span {
     font-size: 1.8rem;
+    vertical-align: top;
 }
 
 header .button-collapse i {
