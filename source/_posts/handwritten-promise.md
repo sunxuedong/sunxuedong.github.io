@@ -16,8 +16,8 @@ categories: javascript
 本 Promise 基于 [Promise/A+规范](https://promisesaplus.com/) 实现，这里是小弟译的 [【译】Promise/A+规范](http://sunxuedong.com/2019/12/03/translate-promise-a-plus-specifications)。
 ## promise 简介
 >1.promise 是有状态的。分别为：pending（等待态）、fulfilled（完成态）和rejected（失败态）。
->2.promise 有 then 方法，并且可以根据 promise 的状态相应的调用回调函数。
->3.then 方法支持链式调用。
+>2.promise 有 `then` 方法，并且可以根据 promise 的状态相应的调用回调函数。
+>3.`then` 方法支持链式调用。
 
 ## promise 的状态
 
@@ -118,7 +118,7 @@ class Promise2 {
 }
 ```
 
-## then方法的链式调用
+## `then` 方法的链式调用
 
 1.描述：使 `then` 方法能够链式调用，首先then方法返回的肯定是一个 promise 对象，如果 `then` 方法的回调函数里返回的也是个 promise 对象，那么最终返回这个 promise 对象 resolve 传入的值或 `then` 方法里 return 的值，举几个例子如：
 ``` js

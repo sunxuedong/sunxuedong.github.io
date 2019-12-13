@@ -73,15 +73,15 @@ promise.then(onFulfilled, onRejected)
     2. 它一定不能在 `promise` rejected 之后调用。
     3. 它不能被调用超过一次。
 
-4. `onFulfilled` 或 `onRejected` 只有在 [执行上下文](https://es5.github.io/#x10.3) 堆栈仅包含平台代码时才可被调用<a id="ref-3-1" href="#3-1" rel="footnote"><sup>[3.1]</sup></a>。
+4. `onFulfilled` 或 `onRejected` 只有在 [执行上下文](https://es5.github.io/#x10.3) 堆栈仅包含平台代码时才可被调用<sup><a id="ref-3-1" href="#3-1" rel="footnote">[3.1]</a></sup>。
 
-5. `onFulfilled` 和 `onRejected` 必须被作为函数调用（即没有 `this` 值）。<a id="ref-3-2" href="#3-2" rel="footnote"><sup>[3.2]</sup></a>
+5. `onFulfilled` 和 `onRejected` 必须被作为函数调用（即没有 `this` 值）。<sup><a id="ref-3-2" href="#3-2" rel="footnote">[3.2]</a></sup>
 
 6. `then` 方法可以被同一个 promise 对象调用多次。
     1. 如果/当 `promise` 执行完成后，所有相应的 `onFulfilled` 回调函数，必须按照对 `then` 的原始调用的顺序执行。
     2. 如果/当 `promise` 执行被拒绝后，所有相应的 `onRejected` 回调函数，必须按照对 `then` 的原始调用的顺序执行。
 
-7. `then` 必须返回一个 promise 对象 <a id="ref-3-3" href="#3-3" rel="footnote"><sup>[3.3]</sup></a>
+7. `then` 必须返回一个 promise 对象 <sup><a id="ref-3-3" href="#3-3" rel="footnote">[3.3]</a></sup>
 ``` js
 promise2 = promise1.then(onFulfilled, onRejected);   
 ```
@@ -98,12 +98,12 @@ promise2 = promise1.then(onFulfilled, onRejected);
 
 要运行 `[[Resolve]](promise, x)`，需通过以下步骤：
 1. 如果 `promise` 和 `x` 引用同一对象[^1]，以 `TypeError` 为原因拒绝 promise。
-2. 如果 `x` 是一个 promise 对象，则 采用 `x` 的状态 <a id="ref-3-4" href="#3-4" rel="footnote"><sup>[3.4]</sup></a>。
+2. 如果 `x` 是一个 promise 对象，则 采用 `x` 的状态 <sup><a id="ref-3-4" href="#3-4" rel="footnote">[3.4]</a></sup>。
     1. 如果 `x` 处于 pending，`promise` 必须保持 pending 直到 `x` 变成 fulfilled 或 rejected。
     2. 如果/当 `x` 处于 fulfilled，使用相同的 value 完成 `promise`。
     3. 如果/当 `x` 处于 rejected，使用相同的 reason 拒绝 `promise`。
 3. 此外，如果 `x` 是一个对象或函数：
-    1. 把 `x.then` 赋值给 `then`。<a id="ref-3-5" href="#3-5" rel="footnote"><sup>[3.5]</sup></a>
+    1. 把 `x.then` 赋值给 `then`。<sup><a id="ref-3-5" href="#3-5" rel="footnote">[3.5]</a></sup>
     2. 如果取属性 `x.then` 的值时意外抛出错误 `e`，则使用 `e` 作为原因拒绝 `promise`。
     3. 如果 `then` 是一个函数，则以 `x` 作为 `this` 对其调用，以 `resolvePromise` 作为第一个参数，`rejectPromise` 作为第二个参数，其中:
         1. 如果/当以值 `y` 为参数调用 `resolvePromise` 时，则运行 `[[Resolve]](promise, y)`。
@@ -115,7 +115,7 @@ promise2 = promise1.then(onFulfilled, onRejected);
     4. 如果 `then` 不是函数，以 `x` 为值完成 `promise`。
 4. 如果 `x` 不是对象或者函数，以 `x` 为值完成 `promise`。
 
-如果使用参与循环 thenable 链的 thenable 来 resolve promise[^2]，由于 `[[Resolve]](promise, thenable)` 的递归性质最终导致再次调用 `[[Resolve]](promise, thenable)`，按照上面的算法将会导致无限递归。本规范鼓励但不要求实现检测这种递归，并以 `TypeError` 作为原因拒绝 `promise`<a id="ref-3-6" href="#3-6" rel="footnote"><sup>[3.6]</sup></a>。
+如果使用参与循环 thenable 链的 thenable 来 resolve promise[^2]，由于 `[[Resolve]](promise, thenable)` 的递归性质最终导致再次调用 `[[Resolve]](promise, thenable)`，按照上面的算法将会导致无限递归。本规范鼓励但不要求实现检测这种递归，并以 `TypeError` 作为原因拒绝 `promise`<sup><a id="ref-3-6" href="#3-6" rel="footnote">[3.6]</a></sup>。
 ## 注释
 <p id="3-1">
     <span style="float: left;">3.1. </span>
@@ -123,8 +123,8 @@ promise2 = promise1.then(onFulfilled, onRejected);
         这里“平台代码”是指引擎、环境以及 promise 的实现代码。
         实际上，这个要求确保了 <code>onFulfilled</code> 和 <code>onRejected</code> 异步执行，
         即在调用 <code>then</code> 方法的那个事件循环之后的新执行栈中执行。
-        这个可以通过"宏任务（macro-task）"机制如 <a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers"><code>setTimeout</code></a> 或者 <a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html#processingmodel"><code>setImmediate</code></a>
-        或者"微任务（micro-task）"机制如 <a href="https://dom.spec.whatwg.org/#interface-mutationobserver"><code>MutationObserver</code></a> 或者 <a href="https://nodejs.org/api/process.html#process_process_nexttick_callback"><code>process.nextTick</code></a> 来实现。
+        这个可以通过"宏任务（macro-task）"机制如 <code><a href="https://html.spec.whatwg.org/multipage/webappapis.html#timers">setTimeout</a></code> 或者 <code><a href="https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html#processingmodel">setImmediate</a></code>
+        或者"微任务（micro-task）"机制如 <code><a href="https://dom.spec.whatwg.org/#interface-mutationobserver">MutationObserver</a></code> 或者 <code><a href="https://nodejs.org/api/process.html#process_process_nexttick_callback">process.nextTick</a></code> 来实现。
         因为 promise 的实现被当作是平台代码，
         所以它本身可能会包含一个任务调度队列或者 "trampoline" 来调用处理程序。
         <a href="#ref-3-1" rev="footnote"> ↩</a>

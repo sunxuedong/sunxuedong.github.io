@@ -17,4 +17,4 @@ layout: "friends"
 例如我的博客友链，大家可以加到自己博客里哦：
 * **名称：**sunxuedong
 * **地址：**https://sunxuedong.com
-* **头像：**https://sunxuedong.com/medias/avatars/avatar.jpg
+* **头像：**https://sunxuedong.com/medias/avatars/my-face.png

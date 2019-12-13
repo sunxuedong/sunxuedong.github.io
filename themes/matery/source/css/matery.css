@@ -110,6 +110,15 @@ code {
     background-color: #f8f8f8;
     border-radius: 2px;
 }
+#articleContent code a {
+    color: #e96900;
+}
+#articleContent code a:hover {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%23e96900' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%;
+    background-size: 20px auto;
+    text-decoration: none;
+    animation: waveMove 1s infinite linear;
+}
 
 pre code {
     padding: 0;
@@ -1019,9 +1028,15 @@ article .article-tags .chip {
     text-decoration: underline;
     word-wrap:break-word;
 }
+@keyframes waveMove {
+    from { background-position: 0 100%; }
+    to { background-position:-20px 100%; }
+}
 #articleContent a:hover {
-    color: green;
-    text-shadow: lightgreen 0px 0px 2px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 4'%3E%3Cpath fill='none' stroke='%2342b983' d='M0 3.5c5 0 5-3 10-3s5 3 10 3 5-3 10-3 5 3 10 3'/%3E%3C/svg%3E") repeat-x 0 100%;
+    background-size: 20px auto;
+    text-decoration: none;
+    animation: waveMove 1s infinite linear;
 }
 
 #articleContent .img-item {
