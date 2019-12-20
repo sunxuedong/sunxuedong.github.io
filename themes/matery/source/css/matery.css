@@ -264,7 +264,7 @@ header nav .brand-span {
     box-shadow: 0 0 3px #576657, inset 0 0 10px #699add;
     background: deepskyblue url(/medias/avatars/my-face.png) center/100% no-repeat;
 }
-.my-face:hover .face-icon {
+.brand-logo:hover .face-icon, .my-face:hover .face-icon {
     background-color: lightskyblue;
 }
 
