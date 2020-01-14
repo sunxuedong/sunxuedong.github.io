@@ -158,7 +158,7 @@ promise2 = promise1.then(onFulfilled, onRejected);
     <p style="margin-left: 32px;">
         这个过程首先存储对 <code>x.then</code> 的引用，然后测试该引用，然后调用该引用，
         避免了对 <code>x.then</code> 的多次访问。
-        这一步骤中，我们首先会存储一个指向 x.then 的引用，然后测试该调用，之后调用该引用，
+        这一步骤中，我们首先会存储一个指向 <code>x.then</code> 的引用，然后测试该调用，之后调用该引用，
         这一系列过程为了防止对 <code>x.then</code> 属性的多处访问。
         这些预防措施对于确保访问器属性的一致性非常重要，因为访问器属性的值可能在检索之间发生变化
         <sup id="fnref:3">
